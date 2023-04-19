@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Searches::ProcessSearch do
   describe '#call' do
-    include_context 'shared/contexts/searches/process_search'
+    include_context 'shared/services/contexts/searches/process_search'
 
     let(:attributes) do
       {

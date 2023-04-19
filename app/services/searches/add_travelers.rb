@@ -5,7 +5,13 @@ module Searches
     prepend BaseOperation
 
     option :search, type: Types.Instance(Search)
-    option :travelers_attributes, type: Types::Array.of(Types::Strict::Hash)
+    option :travelers_attributes,
+           type: Types::Array.of(
+             Types::Strict::Hash.schema(
+               type: Types::String.enum('Traveler::Adult', 'Traveler::Child'),
+               quantity: Types::NumericString | Types::Strict::Integer
+             )
+           )
 
     def call
       operation = SearchesTravelers::Create.call(searches_travelers_attributes)

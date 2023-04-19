@@ -75,7 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_143712) do
     t.integer "traveler_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["search_id", "traveler_id"], name: "index_searches_travelers_on_search_id_and_traveler_id", unique: true
+    t.index ["search_id", "traveler_id"], name: "index_searches_travelers_on_search_id_and_traveler_id"
   end
 
   create_table "travelers", force: :cascade do |t|

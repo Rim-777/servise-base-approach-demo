@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::SearchesController, type: :request do
-  include_context 'shared/contexts/searches/process_search'
+  include_context 'shared/services/contexts/searches/process_search'
 
   let(:headers) do
     { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }

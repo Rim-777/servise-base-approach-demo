@@ -9,7 +9,7 @@ class CreateSearchesTravelers < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :searches_travelers, %i[search_id traveler_id], unique: true
+    add_index :searches_travelers, %i[search_id traveler_id]
 
     add_foreign_key :searches_travelers, :searches
     add_foreign_key :searches_travelers, :travelers

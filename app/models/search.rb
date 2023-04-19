@@ -8,4 +8,6 @@ class Search < ApplicationRecord
            class_name: Search::Result.name,
            inverse_of: :search,
            dependent: :destroy
+
+  validates :departure_date, presence: true
 end
