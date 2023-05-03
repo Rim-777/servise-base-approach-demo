@@ -3,7 +3,8 @@ Ruby-on-Rails [JSON:API](https://jsonapi.org/) application with ActiveRecord, Dr
 
 ### Overview:
 - Demo project for Backend developers at Shypple.B.V. made for knowledge sharing about service based modular application design in Ruby on Rails. 
-- The goal of the project is to demonstrate a reliable approach how to build complex but easily scalable and maintainable applications.
+- The goal of the project is to demonstrate a reliable approach how to build complex but robust and easily scalable and maintainable applications.
+
 ### Logic:
 Dummy API for searching for cruises.
 
@@ -42,9 +43,6 @@ To execute automation tests, run following commands:
  $ bundle exec rake db:migrate RAILS_ENV=test #(the first time only)
  $ bundle exec rspec
 ```
-
-Detailed documentation on [SwaggerHub](https://app.swaggerhub.com/apis-docs/Rim-777/Easy-Money-Transfer-API/1.0.0)
-
 
 ### License
 
