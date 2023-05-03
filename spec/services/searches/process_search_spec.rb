@@ -26,6 +26,31 @@ RSpec.describe Searches::ProcessSearch do
       }
     end
 
+    let(:search_results) do
+      [
+        {
+          origin_port: 'origin_port 1',
+          destination_port: 'destination_port 1',
+          departure_date: 1_681_399_699,
+          traveler_class: 'traveler_class 1',
+          price: 88,
+          id: '1'
+        },
+        {
+          origin_port: 'origin_port 2',
+          destination_port: 'destination_port 2',
+          departure_date: 1_681_399_639,
+          traveler_class: 'traveler_class 2',
+          price: 99,
+          id: '2'
+        }
+      ]
+    end
+
+    before do
+      allow(JSON).to receive(:parse).and_return(search_results)
+    end
+
     subject { described_class.call(attributes) }
 
     it 'creates a new search' do
@@ -41,7 +66,7 @@ RSpec.describe Searches::ProcessSearch do
     end
 
     it 'creates an expected number of searches travelers' do
-      expect { subject }.to change(Search::Result, :count).from(0).to(7)
+      expect { subject }.to change(Search::Result, :count).from(0).to(2)
     end
 
     context 'route exist' do
