@@ -1,24 +1,51 @@
-# README
+## LET'S MOVE
+Ruby-on-Rails [JSON:API](https://jsonapi.org/) application with ActiveRecord, Dry-rb, RSpec
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Overview:
+- Demo project for Backend developers at Shypple.B.V. made for knowledge sharing about service based modular application design in Ruby on Rails. 
+- The goal of the project is to demonstrate a reliable approach how to build complex but easily scalable and maintainable applications.
+### Logic:
+Dummy API for searching for cruises.
 
-Things you may want to cover:
+### Dependencies:
+- Ruby 3.2.2
+- PostgreSQL
 
-* Ruby version
+### Installation:
+- Clone poject
+- Run bundler:
 
-* System dependencies
+ ```shell
+ $ bundle install
+ ```
+- Copy database.yml:
+```shell
+$ cp config/database.yml.sample config/database.yml
+```
 
-* Configuration
+- Create and migrate database:
 
-* Database creation
+```shell
+ $ bundle exec rails db:create
+ $ bundle exec rails db:migrate
+```
+- Run application:
 
-* Database initialization
+ ```shell
+ $ rails server
+ ```
 
-* How to run the test suite
+##### Tests:
+To execute automation tests, run following commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+ $ bundle exec rake db:migrate RAILS_ENV=test #(the first time only)
+ $ bundle exec rspec
+```
 
-* Deployment instructions
+Detailed documentation on [SwaggerHub](https://app.swaggerhub.com/apis-docs/Rim-777/Easy-Money-Transfer-API/1.0.0)
 
-* ...
+
+### License
+
+The software is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
